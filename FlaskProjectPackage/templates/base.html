@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <a href="{{ url_for('home_page') }}">Home</a>
+    <a href="{{ url_for('create_page') }}">Create</a>
+    <a href="{{ url_for('delete_page') }}">Delete</a>
+    <a href="{{ url_for('change_page') }}">Change</a>
+    <a href="{{ url_for('get_page') }}">Get</a>
+    <a href="{{ url_for('get_all_page') }}">Get All</a>
+    {% block renderer %}
+
+    {% endblock %}
+</body>
+</html>

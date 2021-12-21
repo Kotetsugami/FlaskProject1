@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome to the get all page
+{% endblock %}
+{% block renderer %}
+    {% if news %}
+        {%  for currNews in news %}
+            <div>
+                <h2>{{ currNews.title }}</h2>
+                <p>{{ currNews.description }}</p>
+                <h4>{{ currNews.category }}</h4>
+                <h6>{{  currNews.date }}</h6>
+                <h6>{{ currNews.author }}</h6>
+            </div>
+            <br>
+        {%  endfor %}
+    {% endif %}
+{% endblock %}

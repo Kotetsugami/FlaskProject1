@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome to the delete page
+{% endblock %}
+{% block renderer %}
+    <div>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <h1>Please input all the information to delete news!</h1>
+            <br>
+            {{ form.title.label() }}
+            {{ form.title() }}
+            <br>
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}

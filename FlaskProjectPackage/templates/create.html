@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome to the create page
+{% endblock %}
+{% block renderer %}
+    <div>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <h1>Please input all the information to create news!</h1>
+            <br>
+            {{ form.title.label() }}
+            {{ form.title() }}
+            <br>
+            {{ form.description.label() }}
+            {{ form.description() }}
+            <br>
+            {{ form.category.label() }}
+            {{ form.category() }}
+            <br>
+            {{ form.author.label() }}
+            {{ form.author() }}
+            <br>
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}

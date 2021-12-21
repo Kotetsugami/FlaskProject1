@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome to the change page
+{% endblock %}
+{% block renderer %}
+    <div>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <h1>Please input all the information to change news!</h1>
+            <br>
+            {{ form.title.label() }}
+            {{ form.title() }}
+            <br>
+            {{ form.description.label() }}
+            {{ form.description() }}
+            <br>
+            {{ form.submit() }}
+        </form>
+    </div>
+{% endblock %}
